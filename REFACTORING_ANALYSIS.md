@@ -427,6 +427,18 @@ Parking.App.New2.sln
 | 5 | Testing & Validation | 8-16 | LOW | All phases |
 | **Total** | **All Phases** | **26-52** | **MEDIUM** | Sequential |
 
+**Note on variance:** The wide range (26-52 hours, 100% variance) accounts for:
+- **Developer Experience**: Experienced .NET developers lean toward lower end, less experienced toward higher end
+- **Code Familiarity**: Developers familiar with codebase can work 30-40% faster
+- **Unexpected Issues**: Undiscovered dependencies, configuration issues, or missing documentation
+- **Testing Depth**: Minimal testing (lower end) vs. comprehensive testing (upper end)
+- **Documentation Time**: Brief updates (lower) vs. thorough documentation (upper)
+
+For planning purposes:
+- **Optimistic** (26h): Experienced developer, no blockers, minimal testing
+- **Realistic** (40h): Average developer, typical issues, good testing
+- **Pessimistic** (52h): Less experienced, multiple blockers, comprehensive testing
+
 ### 4.2 Resource Requirements
 
 - **Developer Skills Required:**

@@ -49,8 +49,8 @@ Use this checklist to track your progress through the refactoring process.
 ### 1.3 Verification
 
 - [ ] Search for Windows-specific references
-  - [ ] `grep -r "using System.Windows" Parking.Domain/` (should return nothing)
-  - [ ] `grep -r "using System.Windows" Parking.Infrastructure/` (should return nothing)
+  - [ ] `grep -rn --include='*.cs' "using System.Windows" Parking.Domain/` (should return nothing)
+  - [ ] `grep -rn --include='*.cs' "using System.Windows" Parking.Infrastructure/` (should return nothing)
 - [ ] Test compilation
   - [ ] `dotnet build Parking.Domain/Parking.Domain.csproj` (should succeed)
   - [ ] `dotnet build Parking.Infrastructure/Parking.Infrastructure.csproj` (should succeed)
@@ -187,7 +187,7 @@ Use this checklist to track your progress through the refactoring process.
 
 - [ ] Build Parking.Core: `dotnet build Parking.Core/Parking.Core.csproj`
 - [ ] Fix any compilation errors
-- [ ] Verify no WPF references: `grep -r "System.Windows" Parking.Core/`
+- [ ] Verify no WPF references: `grep -rn --include='*.cs' "System.Windows" Parking.Core/`
 
 ### 2.12 Commit Phase 2
 
@@ -479,7 +479,7 @@ Use this checklist to track your progress through the refactoring process.
 - [ ] Run code analysis: `dotnet build /p:RunAnalyzers=true`
 - [ ] Check for warnings
 - [ ] Verify no Windows references in Core/Domain/Infrastructure:
-  - [ ] `grep -r "System.Windows" Parking.Core/ Parking.Domain/ Parking.Infrastructure/`
+  - [ ] `grep -rn --include='*.cs' "System.Windows" Parking.Core/ Parking.Domain/ Parking.Infrastructure/`
 - [ ] Clean up unused using statements
 - [ ] Format code consistently
 
